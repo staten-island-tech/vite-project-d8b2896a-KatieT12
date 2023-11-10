@@ -1,5 +1,10 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
+import '../css/style.css';
+import{menu, name} from "./menu";
+
+console.log(menu, name);
+
+
+/* import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
@@ -22,3 +27,4 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+ */

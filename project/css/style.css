@@ -1,4 +1,100 @@
-:root {
+body,
+html,
+*{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10;
+}
+
+body{
+  background-image: url('img/pexels-codioful-\(formerly-gradienta\)-7135071.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+text-align: center;
+font-size: 5rem;
+font-family: 'Montserrat', sans-serif;
+margin: 30;
+color: rgb(0, 0, 0);
+}
+
+
+.card{
+    height:38vh;
+    width: 20vw;
+background-color:rgb(139, 107, 138);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+border-radius: 10px;
+margin-bottom: 40px;
+box-shadow: 7px 3px rgb(87, 24, 85);
+}
+.book-image{
+    width: 35%;
+}
+
+.book-title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+    margin-top: 2rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.book-price{
+    font-size: 3rem;
+    font-family: 'Hind Madurai', sans-serif;
+
+}
+.container{
+display: flex;
+width: 90%;
+flex-wrap: wrap;
+justify-content: space-around;
+margin: 5rem auto;
+padding: 5px;
+flex-direction: row;
+}
+
+a{
+  color: rgb(240, 248, 255);
+}
+
+.card:hover{
+  transform:translate(-20px)
+}
+h1:hover{
+  background-color: rgb(139, 107, 138);
+  border-radius: 10px;
+}
+a:hover{
+  background-color: rgb(35, 56, 107);
+  border-radius: 10px;
+}
+
+.book-title:hover{
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+@media screen and (max-width:1000px){
+  .card{
+    width:40%;
+  }
+}
+@media screen and (max-width:813px){
+    .card{
+      width:100%;
+    }
+    
+  }
+
+/* came with the project
+ :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -95,3 +191,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+ */

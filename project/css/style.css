@@ -11,35 +11,35 @@ body{
   background-image: url('img/pexels-codioful-\(formerly-gradienta\)-7135071.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(30, 41, 63);
 }
 h1{
 text-align: center;
 font-size: 5rem;
 font-family: 'Montserrat', sans-serif;
 margin: 30;
-color: rgb(0, 0, 0);
+color: rgb(209, 207, 230);
 }
 
 
 .card{
     height:38vh;
-    width: 20vw;
-background-color:rgb(139, 107, 138);
+    width: 25vw;
+background-color:rgb(214, 210, 250);
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
 border-radius: 10px;
 margin-bottom: 40px;
-box-shadow: 7px 3px rgb(87, 24, 85);
+box-shadow: 7px 3px rgb(28, 24, 87);
 }
 .book-image{
     width: 35%;
 }
 
 .book-title{
-    font-size: 3rem;
-    text-transform: uppercase;
+    font-size: 2.5rem;
     font-family: 'Lora', serif;
     margin-top: 2rem;
     color: rgb(0, 0, 0);
@@ -65,21 +65,8 @@ a{
 }
 
 .card:hover{
-  transform:translate(-20px)
-}
-h1:hover{
-  background-color: rgb(139, 107, 138);
-  border-radius: 10px;
-}
-a:hover{
-  background-color: rgb(35, 56, 107);
-  border-radius: 10px;
-}
-
-.book-title:hover{
-  transform: scale(1.1);
+  transform:translate(-20px);
   transition-duration: 0.3s;
-  transition-timing-function: ease;
 }
 @media screen and (max-width:1000px){
   .card{

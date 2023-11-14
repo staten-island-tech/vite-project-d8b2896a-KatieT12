@@ -1,7 +1,7 @@
 import '../css/style.css';
-import{booksForSale, name} from "./sale";
+import{booksForSale} from "./sale";
 
-console.log(booksForSale, name);
+console.log(booksForSale);
 
 
 /* import javascriptLogo from './javascript.svg'

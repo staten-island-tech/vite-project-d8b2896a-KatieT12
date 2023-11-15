@@ -16,7 +16,7 @@ body,
 
   /* Intentions */
 --primary: var(--light-blue);
---secodnary: var(--dark-blue);
+--secondary: var(--dark-blue);
   /*Typography*/
   --h1: 7.594rem;
   --h2: 5.063rem;
@@ -24,12 +24,20 @@ body,
   --h4: 2.25rem;
   --h5: 1.5rem;
 }
+.warm{
+  --primary: var(--light-red);
+  --secondary: var(--dark-red);
+}
+.cool{
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
+}
 .title{
   background-color: var(--primary);
   text-align: center;
 }
 .main{
-  background-color: var(--secodnary);
+  background-color: var(--secondary);
   height: 90vh;
 }
 h1{

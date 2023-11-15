@@ -56,11 +56,11 @@ const booksForSale = [
         Genres: "",
     },
     {
-        title: "The Joy Luck Club",
-        Author: "Amy Tan",
-        Price: "$9.50",
+        title: "Fault in Our Stars",
+        Author: "John Green",
+        Price: "$9.42",
         img: "link",
-        Genres: "",
+        Genres: "Young adult fiction, Romance",
     },
     {
         title: "It Ends with Us",
@@ -83,6 +83,7 @@ const booksForSale = [
         img: "link",
         Genres: "",
     },
+    // fault in our stars, a series of unfortunate events, before the coffee gets cold, one of us is lying, the maid, tkamb, shatter me, transformers, dune, 
     
 ];
 

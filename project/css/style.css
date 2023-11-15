@@ -1,85 +1,55 @@
-body,
 html,
+body,
 *{
-    font-size: 62.5%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 10;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
+:root{
+  --black: #000;
+  --light-blue:#2998ff;
+  --dark-blue: #135cc5;
+  --light-red:#f87171;
+  --dark-red: #dc2626;
+  --gray: #252c30;
 
-body{
-  background-image: url('img/pexels-codioful-\(formerly-gradienta\)-7135071.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(30, 41, 63);
+  /* Intentions */
+--primary: var(--light-blue);
+--secodnary: var(--dark-blue);
+  /*Typography*/
+  --h1: 7.594rem;
+  --h2: 5.063rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+.title{
+  background-color: var(--primary);
+  text-align: center;
+}
+.main{
+  background-color: var(--secodnary);
+  height: 90vh;
 }
 h1{
-text-align: center;
-font-size: 5rem;
-font-family: 'Montserrat', sans-serif;
-margin: 30;
-color: rgb(209, 207, 230);
+  font-size: var(--h1);
 }
-
-
-.card{
-    height:38vh;
-    width: 25vw;
-background-color:rgb(214, 210, 250);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-border-radius: 10px;
-margin-bottom: 40px;
-box-shadow: 7px 3px rgb(28, 24, 87);
+h2{
+  font-size: var(--h2);
 }
-.book-image{
-    width: 35%;
+h3{
+  font-size: var(--h3);
 }
-
-.book-title{
-    font-size: 2.5rem;
-    font-family: 'Lora', serif;
-    margin-top: 2rem;
-    color: rgb(0, 0, 0);
-    text-align: center;
+h4{
+  font-size: var(--h4);
 }
-.book-price{
-    font-size: 3rem;
-    font-family: 'Hind Madurai', sans-serif;
-
+h5{
+  font-size: var(--h5);
 }
-.container{
-display: flex;
-width: 90%;
-flex-wrap: wrap;
-justify-content: space-around;
-margin: 5rem auto;
-padding: 5px;
-flex-direction: row;
+h1, h2, h3, h4, h5{
+  text-align: center;
 }
-
-a{
-  color: rgb(240, 248, 255);
-}
-
-.card:hover{
-  transform:translate(-20px);
-  transition-duration: 0.3s;
-}
-@media screen and (max-width:1000px){
-  .card{
-    width:40%;
-  }
-}
-@media screen and (max-width:813px){
-    .card{
-      width:100%;
-    }
-    
-  }
-
 /* came with the project
  :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -1,21 +1,27 @@
 import '../css/style.css';
 import{booksForSale} from "./sale";
-/* const DOMSelectors = {
-    booktitle: document.querySelector(""),
-    bookcover: document.querySelector(""),
-    bookauthor: document.querySelector(""),
-    bookprice: document.querySelector(""),
-}
-document.querySelector("container").insertAdjacentHTML(
+ const DOMSelectors = {
+     booktitle: document.querySelector("booksForSale.title"),
+    bookcover: document.querySelector("booksForSale.img"),
+    bookauthor: document.querySelector("booksForSale.Author"),
+    bookprice: document.querySelector("booksForSale.price"), 
+    changetheme: document.querySelector("#changetheme"),
+    romacebtn: document.querySelector("#romance"),
+    scifibtn: document.querySelector("#sciencefic"),
+    container: document.querySelector("#container"),
+};
+
+/* booksForSale.forEach((element) =>
+element.document.querySelector("#container").insertAdjacentHTML(
      `<div class = "card">
      <h3 class="title">${DOMSelectors.booktitle.value}</h3>
      <h4 class="author">${DOMSelectors.bookauthor.value}</h4>
      <img src=${DOMSelectors.inputImage.value}> </img>
      <br>
  </div>`
-); */
+));    */
 
-document.querySelector("#changetheme").addEventListener("click", function (){
+DOMSelectors.changetheme.addEventListener("click", function (){
     if(document.body.classList.contains("light")){
         document.body.classList.add("dark");
         document.body.classList.remove("light");
@@ -26,7 +32,7 @@ document.querySelector("#changetheme").addEventListener("click", function (){
 });
 // cool is light
 // warm is dark
-document.querySelector("#romance").addEventListener("click", function (){
+DOMSelectors.romancebtn.addEventListener("click", function (){
     booksForSale
     .filter(element => element.Genres.includes ('Romance'))
     .forEach(element => document.body.classList.add(element.title));

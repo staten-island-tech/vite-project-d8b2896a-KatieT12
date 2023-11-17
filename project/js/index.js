@@ -1,14 +1,15 @@
 import '../css/style.css';
 import{booksForSale} from "./sale";
  const DOMSelectors = {
-     booktitle: document.querySelector("booksForSale.title"),
+    booktitle: document.querySelector("booksForSale.title"),
     bookcover: document.querySelector("booksForSale.img"),
     bookauthor: document.querySelector("booksForSale.Author"),
     bookprice: document.querySelector("booksForSale.price"), 
     changetheme: document.querySelector("#changetheme"),
-    romacebtn: document.querySelector("#romance"),
+    romancebtn: document.querySelector("#romance"),
     scifibtn: document.querySelector("#sciencefic"),
     container: document.querySelector("#container"),
+    container:document.querySelector("#container"),
 };
 
 /* booksForSale.forEach((element) =>
@@ -33,12 +34,32 @@ DOMSelectors.changetheme.addEventListener("click", function (){
 // cool is light
 // warm is dark
 DOMSelectors.romancebtn.addEventListener("click", function (){
-    booksForSale
+    if(booksForSale.Genres.contains("Romance")){
+        document.querySelector("#container").insertAdjacentHTML(
+            `<div class = "card">
+            <h3 class="booktitle">${DOMSelectors.booktitle.value}</h3>
+            <img src=${DOMSelectors.inputImage.value}> </img>
+            <h4 class="bookauthor">${DOMSelectors.bookauthor.value}</h4>
+            <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
+        </div>`
+       )}});
+       
+DOMSelectors.scifibtn.addEventListener("click", function (){
+    if(booksForSale.Genres.contains("Science Fiction")){
+        document.querySelector("#container").insertAdjacentHTML(
+            `<div class = "card">
+            <h3 class="booktitle">${DOMSelectors.booktitle.value}</h3>
+            <img src=${DOMSelectors.inputImage.value}> </img>
+            <h4 class="bookauthor">${DOMSelectors.bookauthor.value}</h4>
+            <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
+        </div>`
+       )}});
+        /* document.container.classList.add(element.title); */
+ /* booksForSale
     .filter(element => element.Genres.includes ('Romance'))
-    .forEach(element => document.body.classList.add(element.title));
-});
-document.querySelector("#sciencefic").addEventListener("click", function (){
+    .forEach(element => DOMSelectors.container.add(element.title)); */
+/* document.querySelector("#sciencefic").addEventListener("click", function (){
     booksForSale
     .filter(element => element.Genres.includes ('Science Fiction'))
-    .forEach(element => document.body.classList.add(element.title));
-});
+    .forEach(element => DOMSelectors.container.add(element.title));
+}); */

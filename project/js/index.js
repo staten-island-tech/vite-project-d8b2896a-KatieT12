@@ -9,18 +9,17 @@ import{booksForSale} from "./sale";
     romancebtn: document.querySelector("#romance"),
     scifibtn: document.querySelector("#sciencefic"),
     container: document.querySelector("#container"),
-    container:document.querySelector("#container"),
 };
 
-/* booksForSale.forEach((element) =>
-element.document.querySelector("#container").insertAdjacentHTML(
-     `<div class = "card">
-     <h3 class="title">${DOMSelectors.booktitle.value}</h3>
-     <h4 class="author">${DOMSelectors.bookauthor.value}</h4>
-     <img src=${DOMSelectors.inputImage.value}> </img>
-     <br>
- </div>`
-));    */
+/* booksForSale.forEach((book) =>
+book.DOMSelectors.container.insertAdjacentHTML(
+    `<div class = "card">
+    <h3 class="booktitle">${DOMSelectors.booktitle.value}</h3>
+    <img src=${DOMSelectors.inputImage.value}> </img>
+    <h4 class="bookauthor">${DOMSelectors.bookauthor.value}</h4>
+    <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
+</div>`
+));     */
 
 DOMSelectors.changetheme.addEventListener("click", function (){
     if(document.body.classList.contains("light")){
@@ -33,6 +32,9 @@ DOMSelectors.changetheme.addEventListener("click", function (){
 });
 // cool is light
 // warm is dark
+function romancefilter{
+    
+}
 DOMSelectors.romancebtn.addEventListener("click", function (){
     if(booksForSale.Genres.contains("Romance")){
         document.querySelector("#container").insertAdjacentHTML(
@@ -43,7 +45,7 @@ DOMSelectors.romancebtn.addEventListener("click", function (){
             <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
         </div>`
        )}});
-       
+
 DOMSelectors.scifibtn.addEventListener("click", function (){
     if(booksForSale.Genres.contains("Science Fiction")){
         document.querySelector("#container").insertAdjacentHTML(

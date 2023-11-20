@@ -33,14 +33,12 @@ body,
 .light{
   --primary: var(--ivory);
   --secondary: var(--olive);
-  color:var(--brown);
-  .card{color:var(--yellow)};
+  color:var(--brown);;
 }
 .dark{
   --primary: var(--purple4);
   --secondary: var(--purple3);
   color:var(--purple1);
-  .card{color:var(--purple2)};
 }
 .title{
   background-color: var(--primary);

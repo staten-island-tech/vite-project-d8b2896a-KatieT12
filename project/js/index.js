@@ -10,7 +10,18 @@ import{booksForSale} from "./sale";
     underten: document.querySelector("#underten"),
     container: document.querySelector("#container"),
 };
-
+booksForSale
+.forEach(el => 
+DOMSelectors.container.insertAdjacentHTML(
+    "afterend",
+    `<div class = "card">
+    <h3 class="booktitle">${el.title}</h3>
+    <img src=${el.bookcover}> </img>
+    <h4 class="bookauthor">${el.Author}</h4>
+    <h5 class="bookprice">${el.Price}</h5>
+    <h5 class="">${el.Price}</h5>
+</div>`
+))
 /* booksForSale.forEach((book) =>
 book.DOMSelectors.container.insertAdjacentHTML(
     `<div class = "card">

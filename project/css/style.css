@@ -68,9 +68,9 @@ h5{
 h1, h2, h3, h4, h5{
   text-align: center;
 }
-#changetheme, #romance, #sciencefic, #changetheme:link, 
-#romance:link, #sciencefic:link, #changetheme:visited,
-#romance:visited, #sciencefic:visited{
+#changetheme, #underten, #instockbooks, #changetheme:link, 
+#underten:link, #instockbooks:link, #changetheme:visited,
+#underten:visited, #instockbooks:visited{
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5{
   border-radius: 10rem;
   transition: all 0.2s;
 }
-#changetheme:hover, #romance:hover, #sciencefic:hover{
+#changetheme:hover,  #underten:hover, #instockbooks:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -102,12 +102,19 @@ img{
   width: 30%;
   margin-bottom: 5px;
 }
-.author{
+.bookauthor{
   font-size: 1rem;
   margin-top: 1px;
   margin-bottom: 5px;
-  color: rgb(255, 255, 255);
-
+  color: rgb(0, 0, 0);
+}
+.booktitle{
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+.bookprice{
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
 }
 .container{
   display: flex;

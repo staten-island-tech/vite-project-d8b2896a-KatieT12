@@ -6,8 +6,8 @@ import{booksForSale} from "./sale";
     bookauthor: document.querySelector("booksForSale.Author"),
     bookprice: document.querySelector("booksForSale.price"), 
     changetheme: document.querySelector("#changetheme"),
-    romancebtn: document.querySelector("#romance"),
-    scifibtn: document.querySelector("#sciencefic"),
+    instockbooks: document.querySelector("#instockbooks"),
+    underten: document.querySelector("#underten"),
     container: document.querySelector("#container"),
 };
 
@@ -30,32 +30,38 @@ DOMSelectors.changetheme.addEventListener("click", function (){
         document.body.classList.remove("dark");
     }
 });
-// cool is light
-// warm is dark
-function romancefilter{
-    
-}
-DOMSelectors.romancebtn.addEventListener("click", function (){
-    if(booksForSale.Genres.contains("Romance")){
-        document.querySelector("#container").insertAdjacentHTML(
-            `<div class = "card">
-            <h3 class="booktitle">${DOMSelectors.booktitle.value}</h3>
-            <img src=${DOMSelectors.inputImage.value}> </img>
-            <h4 class="bookauthor">${DOMSelectors.bookauthor.value}</h4>
-            <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
-        </div>`
-       )}});
 
-DOMSelectors.scifibtn.addEventListener("click", function (){
-    if(booksForSale.Genres.contains("Science Fiction")){
-        document.querySelector("#container").insertAdjacentHTML(
+ function undertenfilter(){
+    if(booksForSale.Price < 10){
+        DOMSelectors.container.insertAdjacentHTML(
+            "afterend",
             `<div class = "card">
             <h3 class="booktitle">${DOMSelectors.booktitle.value}</h3>
             <img src=${DOMSelectors.inputImage.value}> </img>
             <h4 class="bookauthor">${DOMSelectors.bookauthor.value}</h4>
             <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
         </div>`
-       )}});
+       )}
+};
+function inStockfilter(){
+    if(booksForSale.inStock === true){
+        DOMSelectors.container.insertAdjacentHTML(
+            "afterend",
+            `<div class = "card">
+            <h3 class="booktitle">${DOMSelectors.booktitle.value}</h3>
+            <img src=${DOMSelectors.inputImage.value}> </img>
+            <h4 class="bookauthor">${DOMSelectors.bookauthor.value}</h4>
+            <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
+        </div>`
+       )}
+};
+DOMSelectors.underten.addEventListener("click", function (){
+        undertenfilter();
+    });
+
+DOMSelectors.instockbooks.addEventListener("click", function (){
+        inStockfilter();   
+    });
         /* document.container.classList.add(element.title); */
  /* booksForSale
     .filter(element => element.Genres.includes ('Romance'))

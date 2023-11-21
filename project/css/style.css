@@ -4,7 +4,7 @@ body,
   margin: 0;
   padding: 10;
   box-sizing: border-box;
-  font-size: 62.5%;  
+  font-size: 62.5%; 
 }
 :root{
   /*darkmode palette*/
@@ -94,25 +94,21 @@ align-items: center;
 justify-content: space-around;
 border-radius: 10px;
 margin-bottom: 40px;
-background-color: var(--yellow);
+background-color: var(--primary)
 }
 img{
   width: 30%;
   margin-bottom: 5px;
 }
 .bookauthor{
-  font-size: 1rem;
+  font-size: var(--h4);
   margin-top: 1px;
-  margin-bottom: 5px;
-  color: rgb(0, 0, 0);
 }
 .booktitle{
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
+  font-size: var(--h3);
 }
 .bookprice{
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
+  font-size: var(--h4);
 }
 .container{
   display: flex;

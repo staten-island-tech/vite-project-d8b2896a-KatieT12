@@ -17,7 +17,7 @@ DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
     `<div class = "card">
     <h3 class="booktitle">${el.title}</h3>
-    <img src=${el.bookcover}> </img>
+    <img src=${el.img}> </img>
     <h4 class="bookauthor">${el.Author}</h4>
     <h5 class="bookprice">${el.Price}</h5>
 </div>`
@@ -50,7 +50,7 @@ DOMSelectors.changetheme.addEventListener("click", function (){
             "beforeend",
             `<div class = "card">
             <h3 class="booktitle">${el.title}</h3>
-            <img src=${el.bookcover}> </img>
+            <img src=${el.img}> </img>
             <h4 class="bookauthor">${el.Author}</h4>
             <h5 class="bookprice">${el.Price}</h5>
             </div>`
@@ -63,7 +63,7 @@ function inStockfilter(){
             "beforeend",
             `<div class = "card">
             <h3 class="booktitle">${el.title}</h3>
-            <img src=${el.bookcover}> </img>
+            <img src=${el.img}> </img>
             <h4 class="bookauthor">${el.Author}</h4>
             <h5 class="bookprice">${el.Price}</h5>
             </div>`

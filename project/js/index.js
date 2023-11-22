@@ -44,18 +44,24 @@ DOMSelectors.changetheme.addEventListener("click", function (){
 });
 
  function undertenfilter(){
-    if(booksForSale.Price < 10){
-        booksForSale.forEach(el => 
+    const array = booksForSale;
+    const map = array.map((Price) => Price.value < 10);
+    console.log(map);
+
+  /*   if(booksForSale.Price < 10){
+        document.body.classList.remove("card")
+*/
+        booksForSale.forEach(array => 
         DOMSelectors.container.insertAdjacentHTML(
             "beforeend",
             `<div class = "card">
-            <h3 class="booktitle">${el.title}</h3>
-            <img src=${el.img}> </img>
-            <h4 class="bookauthor">${el.Author}</h4>
-            <h5 class="bookprice">${el.Price}</h5>
+            <h3 class="booktitle">${array.title}</h3>
+            <img class="bookcover" src=${array.img} alt="Book Cover"></img>
+            <h4 class="bookauthor">${array.Author}</h4>
+            <h5 class="bookprice">${array.Price}</h5>
             </div>`
-    ))}
-};
+    ))};
+
 function inStockfilter(){
     if(booksForSale.inStock === true){
     booksForSale.forEach(el => 

@@ -42,27 +42,29 @@ DOMSelectors.changetheme.addEventListener("click", function (){
         document.body.classList.remove("dark");
     }
 });
-
+function clearFields(){
+    DOMSelectors.container.innerHTML = "";
+}
  function undertenfilter(){
-    const array = booksForSale;
+    clearFields();
+ /*    const array = booksForSale;
     const map = array.map((Price) => Price.value < 10);
-    console.log(map);
+    console.log(map); */
 
-  /*   if(booksForSale.Price < 10){
-        document.body.classList.remove("card")
-*/
-        booksForSale.forEach(array => 
+         if(booksForSale.Price < 10){
+        booksForSale.forEach(el => 
         DOMSelectors.container.insertAdjacentHTML(
             "beforeend",
             `<div class = "card">
-            <h3 class="booktitle">${array.title}</h3>
-            <img class="bookcover" src=${array.img} alt="Book Cover"></img>
-            <h4 class="bookauthor">${array.Author}</h4>
-            <h5 class="bookprice">${array.Price}</h5>
+            <h3 class="booktitle">${el.title}</h3>
+            <img class="bookcover" src=${el.img} alt="Book Cover"></img>
+            <h4 class="bookauthor">${el.Author}</h4>
+            <h5 class="bookprice">${el.Price}</h5>
             </div>`
-    ))};
+    ))}};
 
 function inStockfilter(){
+    clearFields();
     if(booksForSale.inStock === true){
     booksForSale.forEach(el => 
         DOMSelectors.container.insertAdjacentHTML(
@@ -93,3 +95,25 @@ DOMSelectors.instockbooks.addEventListener("click", function (){
     .filter(element => element.Genres.includes ('Science Fiction'))
     .forEach(element => DOMSelectors.container.add(element.title));
 }); */
+//
+
+function insertCard(arr){
+    arr.forEach((x) =>
+    DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div class = "card">
+        <h3 class="booktitle">${x.title}</h3>
+        <img class="bookcover" src=${x.img} alt="Book Cover"></img>
+        <h4 class="bookauthor">${x.Author}</h4>
+        <h5 class="bookprice">${x.Price}</h5>
+        </div>`
+))
+}
+let buttons = DOMSelectors.querySelector("button")
+//for each button we add an event lsitener
+buttons.forEach((btn) => btn.addEventListener("click", function(){
+    let type = btn.textContent.toLowerCase() //get value or text content of button to be compared -> filtering based on name
+    let newArr = categories.filter((category) => category.cuisine === type)
+    clearFields();
+    insertCard(newArr) // pasxs filtered array into cards to put on screen
+}))

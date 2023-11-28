@@ -1,37 +1,17 @@
 import '../css/style.css';
 import{booksForSale} from "./sale";
-
- const DOMSelectors = {
-    booktitle: document.querySelector("booksForSale.title"),
-    bookcover: document.querySelector("booksForSale.img"),
-    bookauthor: document.querySelector("booksForSale.Author"),
-    bookprice: document.querySelector("booksForSale.price"), 
-    changetheme: document.querySelector("#changetheme"),
-    instockbooks: document.querySelector("#instockbooks"),
-    underten: document.querySelector("#underten"),
-    container: document.querySelector(".container"),
-};
+import {DOMSelectors} from "./DOM";
 
 booksForSale.forEach(el => 
 DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
     `<div class = "card">
     <h3 class="booktitle">${el.title}</h3>
-    <img src=${el.img}> </img>
+    <img src=${el.img} alt="Book Cover"> </img>
     <h4 class="bookauthor">${el.Author}</h4>
     <h5 class="bookprice">${el.Price}</h5>
 </div>`
-)) 
-
-/* booksForSale.forEach((book) =>
-book.DOMSelectors.container.insertAdjacentHTML(
-    `<div class = "card">
-    <h3 class="booktitle">${DOMSelectors.booktitle.value}</h3>
-    <img src=${DOMSelectors.inputImage.value}> </img>
-    <h4 class="bookauthor">${DOMSelectors.bookauthor.value}</h4>
-    <h5 class="bookprice">${DOMSelectors.bookprice.value}</h5>
-</div>`
-));     */
+));
 
 DOMSelectors.changetheme.addEventListener("click", function (){
     if(document.body.classList.contains("light")){
@@ -44,15 +24,13 @@ DOMSelectors.changetheme.addEventListener("click", function (){
 });
 function clearFields(){
     DOMSelectors.container.innerHTML = "";
-}
+};
  function undertenfilter(){
     clearFields();
  /*    const array = booksForSale;
     const map = array.map((Price) => Price.value < 10);
     console.log(map); */
-
-         if(booksForSale.Price < 10){
-        booksForSale.forEach(el => 
+    booksForSale.filter((element) => element.Price < 10).forEach(el => 
         DOMSelectors.container.insertAdjacentHTML(
             "beforeend",
             `<div class = "card">
@@ -61,24 +39,37 @@ function clearFields(){
             <h4 class="bookauthor">${el.Author}</h4>
             <h5 class="bookprice">${el.Price}</h5>
             </div>`
-    ))}};
+    ))
+};
 
 function inStockfilter(){
     clearFields();
-    if(booksForSale.inStock === true){
+    booksForSale.filter((element) => element.inStock === true).forEach(el => 
+        DOMSelectors.container.insertAdjacentHTML(
+            "beforeend",
+            `<div class = "card">
+            <h3 class="booktitle">${el.title}</h3>
+            <img src=${el.img} alt="Book Cover"> </img>
+            <h4 class="bookauthor">${el.Author}</h4>
+            <h5 class="bookprice">${el.Price}</h5>
+            </div>`
+    ))
+};
+function main(){
+    clearFields();
     booksForSale.forEach(el => 
         DOMSelectors.container.insertAdjacentHTML(
             "beforeend",
             `<div class = "card">
             <h3 class="booktitle">${el.title}</h3>
-            <img src=${el.img}> </img>
+            <img src=${el.img} alt="Book Cover"> </img>
             <h4 class="bookauthor">${el.Author}</h4>
             <h5 class="bookprice">${el.Price}</h5>
-            </div>`
-    ))}
+        </div>`
+        )) 
 };
+
 DOMSelectors.underten.addEventListener("click", function (){
-      /*   document.body.classList.remove(); */
         undertenfilter();
 
     });
@@ -86,18 +77,11 @@ DOMSelectors.underten.addEventListener("click", function (){
 DOMSelectors.instockbooks.addEventListener("click", function (){
         inStockfilter();   
     });
-        /* document.container.classList.add(element.title); */
- /* booksForSale
-    .filter(element => element.Genres.includes ('Romance'))
-    .forEach(element => DOMSelectors.container.add(element.title)); */
-/* document.querySelector("#sciencefic").addEventListener("click", function (){
-    booksForSale
-    .filter(element => element.Genres.includes ('Science Fiction'))
-    .forEach(element => DOMSelectors.container.add(element.title));
-}); */
-//
+DOMSelectors.main.addEventListener("click", function (){
+        main();   
+    });
 
-function insertCard(arr){
+/* function insertCard(arr){
     arr.forEach((x) =>
     DOMSelectors.container.insertAdjacentHTML(
         "beforeend",
@@ -108,12 +92,12 @@ function insertCard(arr){
         <h5 class="bookprice">${x.Price}</h5>
         </div>`
 ))
-}
-let buttons = DOMSelectors.querySelector("button")
+}; */
+/* let buttons = DOMSelectors.querySelector("button")
 //for each button we add an event lsitener
 buttons.forEach((btn) => btn.addEventListener("click", function(){
     let type = btn.textContent.toLowerCase() //get value or text content of button to be compared -> filtering based on name
     let newArr = categories.filter((category) => category.cuisine === type)
     clearFields();
-    insertCard(newArr) // pasxs filtered array into cards to put on screen
-}))
+    insertCard(newArr) // pass filtered array into cards to put on screen
+})) */

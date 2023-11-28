@@ -5,7 +5,7 @@ const booksForSale = [
         Price: 8.36,
         img: "https://www.arts.gov/sites/default/files/Fahrenheit%20451%20Cover.jpg",
         inStock: false,
-        Genres: ""
+        Genres: "SciFi, Dystopian Fiction, Political Fictio"
     },
     {
         title: "The Crucible",

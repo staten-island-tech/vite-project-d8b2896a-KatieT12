@@ -66,9 +66,9 @@ h5{
 h1, h2, h3, h4, h5{
   text-align: center;
 }
-#changetheme, /* #underten, #instockbooks, */ #main, #romance, #scifi, #changetheme:link, /* 
-#underten:link, #instockbooks:link, */ #main:link, #romance:link, #scifi:link #changetheme:visited,/* 
-#underten:visited, #instockbooks:visited, */ #main:visited, #romance:visited, #romance:visited{
+#changetheme, /* #underten, #instockbooks, */ #main, .button, #changetheme:link, /* 
+#underten:link, #instockbooks:link, */ #main:link, .button:link, #changetheme:visited,/* 
+#underten:visited, #instockbooks:visited, */ #main:visited, .button:visited{
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5{
   border-radius: 10rem;
   transition: all 0.2s;
 }
-#changetheme:hover,  /* #underten:hover, #instockbooks:hover,  */#main:hover, #romance:hover, #scifi:hover{
+#changetheme:hover,  /* #underten:hover, #instockbooks:hover,  */#main:hover, .button:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }

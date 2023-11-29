@@ -8,8 +8,7 @@
     underten: document.querySelector("#underten"),
     main: document.querySelector("#main"),
     container: document.querySelector(".container"),
-    romance: document.querySelector("#romance"),
-    scifi: document.querySelector("#scifi")
+    button: document.querySelector(".button")
 };
 
 export {DOMSelectors};

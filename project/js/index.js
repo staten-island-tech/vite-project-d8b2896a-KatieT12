@@ -23,7 +23,8 @@ DOMSelectors.changetheme.addEventListener("click", function (){
     }
 });
 
-/* 
+
+
 function clearFields(){
     DOMSelectors.container.innerHTML = "";
 };
@@ -58,6 +59,7 @@ function inStockfilter(){
             </div>`
     ))
 };
+*/
 function main(){
     clearFields();
     booksForSale.forEach(el => 
@@ -72,6 +74,7 @@ function main(){
         )) 
 };
 
+/*
 DOMSelectors.underten.addEventListener("click", function (){
         undertenfilter();
 
@@ -80,9 +83,10 @@ DOMSelectors.underten.addEventListener("click", function (){
 DOMSelectors.instockbooks.addEventListener("click", function (){
         inStockfilter();   
     });
+*/
 DOMSelectors.main.addEventListener("click", function (){
         main();   
-    }); */
+    }); 
 
 function insertCard(arr){
     arr.forEach((x) =>
@@ -96,11 +100,11 @@ function insertCard(arr){
         </div>`
 ))}; 
 
-let buttons = document.querySelector("buttons") 
+let buttons = document.querySelector(".button") 
 //for each button we add an event lsitener
 buttons.forEach((btn) => btn.addEventListener("click", function(){
     let type = btn.textContent.toLowerCase() //get value or text content of button to be compared -> filtering based on name
-    let newArr = booksForSale.filter((book) => book.Genres.includes(type));
+    let newArr = booksForSale.filter((book) => book.Genres === type);
     clearFields();
     insertCard(newArr) // pass filtered array into cards to put on screen
 })); 

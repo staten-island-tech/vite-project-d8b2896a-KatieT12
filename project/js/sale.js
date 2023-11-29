@@ -5,7 +5,7 @@ const booksForSale = [
         Price: 8.36,
         img: "https://www.arts.gov/sites/default/files/Fahrenheit%20451%20Cover.jpg",
         inStock: false,
-        Genres: "SciFi, Dystopian Fiction, Political Fictio"
+        Genres: "SciFi, Dystopian Fiction, Political Fiction"
     },
     {
         title: "The Crucible",
@@ -13,7 +13,7 @@ const booksForSale = [
         Price: 9.99,
         img: "https://images.penguinrandomhouse.com/cover/9780142437339",
         inStock: false,
-        Genres: ""
+        Genres: "Historical Fiction, Tragedy"
     },
     {
         title: "The Seven Husbands of Evelyn Hugo",
@@ -21,7 +21,7 @@ const booksForSale = [
         Price: 17.00,
         img: "https://m.media-amazon.com/images/I/71ZvnK+4JiL._AC_UF1000,1000_QL80_.jpg",
         inStock: true,
-        Genres: ""
+        Genres: "Romance, Historical Ficiton, Psychological Fiction"
     },
     {
         title: "Pride and Prejudice",
@@ -29,7 +29,7 @@ const booksForSale = [
         Price: 19.20,
         img: "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg",
         inStock: true,
-        Genres: ""
+        Genres: "Romance, Fiction"
     },
     {
         title: "A Little Life",
@@ -37,7 +37,7 @@ const booksForSale = [
         Price: 24.52,
         img: "https://m.media-amazon.com/images/I/915wDWUexBL._AC_UF1000,1000_QL80_.jpg",
         inStock: true,
-        Genres: ""
+        Genres: "Fiction"
     },
     {
         title: "Carrie",
@@ -45,7 +45,7 @@ const booksForSale = [
         Price: 9.99,
         img: "https://m.media-amazon.com/images/I/51eYJY7IRFL.jpg",
         inStock: true,
-        Genres: ""
+        Genres: "Horror, Tragedy, Mystery, Psychological Fiction"
     },
     {
         title: "The Great Gatsby",
@@ -53,7 +53,7 @@ const booksForSale = [
         Price: 6.88,
         img: "https://i0.wp.com/americanwritersmuseum.org/wp-content/uploads/2018/02/CK-3.jpg?resize=267%2C400&ssl=1",
         inStock: false,
-        Genres: ""
+        Genres: "Fiction, Tragey"
     },
     {
         title: "A Good Girl's Guide to Murder",
@@ -61,7 +61,7 @@ const booksForSale = [
         Price: 7.19,
         img: "https://m.media-amazon.com/images/I/91r3afbnQsL._AC_UF1000,1000_QL80_.jpg",
         inStock: true,
-        Genres: ""
+        Genres: "Young Adult, Mystery"
     },
     {
         title: "Fault in Our Stars",
@@ -69,7 +69,7 @@ const booksForSale = [
         Price: 9.42,
         img: "https://m.media-amazon.com/images/I/81yAo5ElQlL._AC_UF1000,1000_QL80_.jpg",
         inStock: false,
-        Genres: ""
+        Genres: "Young Adult Fiction, Romance"
     },
     {
         title: "Dune",
@@ -77,7 +77,7 @@ const booksForSale = [
         Price: 40.00,
         img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
         inStock: false,
-        Genres: ""
+        Genres: "SciFi, Fantasy, Romance, Military Science Fiction"
     },
     {
         title: "Harry Potter and the Sorceror's Stone",
@@ -85,7 +85,7 @@ const booksForSale = [
         Price: 6.98,
         img: "https://m.media-amazon.com/images/I/51kQGQirOFL._AC_UF350,350_QL80_.jpg",
         inStock: true,
-        Genres: ""
+        Genres: "Horror, Fantasy, Adventure, Comedy"
     },
     {
         title: "Before the Coffee Gets Cold",
@@ -93,7 +93,7 @@ const booksForSale = [
         Price: 17.99,
         img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1560955053i/44421460.jpg",
         inStock: true,
-        Genres: ""
+        Genres: "Magical Realism, Time Travel Fiction"
     },
     // a series of unfortunate events, before the coffee gets cold, one of us is lying, the maid, tkamb, shatter me, transformers, dune, 
     

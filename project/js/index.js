@@ -22,14 +22,17 @@ DOMSelectors.changetheme.addEventListener("click", function (){
         document.body.classList.remove("dark");
     }
 });
+
+/* 
 function clearFields(){
     DOMSelectors.container.innerHTML = "";
 };
+/* 
  function undertenfilter(){
     clearFields();
- /*    const array = booksForSale;
+   const array = booksForSale;
     const map = array.map((Price) => Price.value < 10);
-    console.log(map); */
+    console.log(map); 
     booksForSale.filter((element) => element.Price < 10).forEach(el => 
         DOMSelectors.container.insertAdjacentHTML(
             "beforeend",
@@ -79,9 +82,9 @@ DOMSelectors.instockbooks.addEventListener("click", function (){
     });
 DOMSelectors.main.addEventListener("click", function (){
         main();   
-    });
+    }); */
 
-/* function insertCard(arr){
+function insertCard(arr){
     arr.forEach((x) =>
     DOMSelectors.container.insertAdjacentHTML(
         "beforeend",
@@ -91,13 +94,13 @@ DOMSelectors.main.addEventListener("click", function (){
         <h4 class="bookauthor">${x.Author}</h4>
         <h5 class="bookprice">${x.Price}</h5>
         </div>`
-))
-}; */
-/* let buttons = DOMSelectors.querySelector("button")
+))}; 
+
+let buttons = document.querySelector("buttons") 
 //for each button we add an event lsitener
 buttons.forEach((btn) => btn.addEventListener("click", function(){
     let type = btn.textContent.toLowerCase() //get value or text content of button to be compared -> filtering based on name
-    let newArr = categories.filter((category) => category.cuisine === type)
+    let newArr = booksForSale.filter((book) => book.Genres.includes(type));
     clearFields();
     insertCard(newArr) // pass filtered array into cards to put on screen
-})) */
+})); 

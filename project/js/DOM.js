@@ -8,7 +8,7 @@
     underten: document.querySelector("#underten"),
     main: document.querySelector("#main"),
     container: document.querySelector(".container"),
-    button: document.querySelector(".button")
+    button: document.querySelector("#button")
 };
 
 export {DOMSelectors};

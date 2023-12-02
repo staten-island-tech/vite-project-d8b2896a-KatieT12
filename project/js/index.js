@@ -100,11 +100,11 @@ function insertCard(arr){
         </div>`
 ))}; 
 
-let buttons = document.querySelector(".button") 
+let buttons = document.querySelector("#button") 
 //for each button we add an event lsitener
 buttons.forEach((btn) => btn.addEventListener("click", function(){
     let type = btn.textContent.toLowerCase() //get value or text content of button to be compared -> filtering based on name
-    let newArr = booksForSale.filter((book) => book.Genres === type);
+    let newArr = booksForSale.filter((book) => book.Genres.includes(type));
     clearFields();
     insertCard(newArr) // pass filtered array into cards to put on screen
 })); 

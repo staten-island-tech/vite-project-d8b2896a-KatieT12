@@ -32,8 +32,6 @@ function clearFields(){
  function undertenfilter(){
     clearFields();
    const array = booksForSale;
-    const map = array.map((Price) => Price.value < 10);
-    console.log(map); 
     booksForSale.filter((element) => element.Price < 10).forEach(el => 
         DOMSelectors.container.insertAdjacentHTML(
             "beforeend",
@@ -89,8 +87,7 @@ DOMSelectors.main.addEventListener("click", function (){
     }); 
 
 function insertCard(arr){
-    arr.forEach((x) =>
-    DOMSelectors.container.insertAdjacentHTML(
+    arr.forEach((x) => DOMSelectors.container.insertAdjacentHTML(
         "beforeend",
         `<div class = "card">
         <h3 class="booktitle">${x.title}</h3>
@@ -99,12 +96,14 @@ function insertCard(arr){
         <h5 class="bookprice">${x.Price}</h5>
         </div>`
 ))}; 
-
-let buttons = document.querySelector("#button") 
-//for each button we add an event lsitener
+function filtering(){
+ let buttons = document.querySelectorAll("#button")  
 buttons.forEach((btn) => btn.addEventListener("click", function(){
-    let type = btn.textContent.toLowerCase() //get value or text content of button to be compared -> filtering based on name
-    let newArr = booksForSale.filter((book) => book.Genres.includes(type));
     clearFields();
-    insertCard(newArr) // pass filtered array into cards to put on screen
+    let genre = btn.textContent.toLowerCase() 
+    let newArr = booksForSale.filter((book) => book.Genres.includes(genre));
+    insertCard(newArr)
 })); 
+};
+filtering()
+

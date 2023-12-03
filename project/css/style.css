@@ -46,7 +46,6 @@ body,
 }
 .main{
   background-color: var(--secondary);
-  background-size: cover;
 }
 h1{
   font-size: var(--h1);

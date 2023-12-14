@@ -44,6 +44,7 @@ function clearFields(){
     ))
 };
 
+
 function inStockfilter(){
     clearFields();
     booksForSale.filter((element) => element.inStock === true).forEach(el => 
